@@ -40,7 +40,7 @@ def show_audio(
     fig, ax = plt.subplots(figsize=figsize)
     # Plot the audio waveform
     ax.plot(t, audio)
-    if cursors:
+    if cursors is not None:
         for index, cursor in enumerate(cursors[:-1]):
             ax.axvspan(
                 cursor / SAMPLE_RATE,
